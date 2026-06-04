@@ -1,0 +1,20 @@
+[Unit]
+Description=Minecraft Backup to GCS
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+
+User=minecraft
+Group=minecraft
+
+ExecStart=/opt/minecraft-backup/backup.sh
+
+StandardOutput=journal
+StandardError=journal
+
+WorkingDirectory=/opt/minecraft-backup
+
+[Install]
+WantedBy=multi-user.target
