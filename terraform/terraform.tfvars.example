@@ -5,3 +5,7 @@ bucket_location = "ASIA-NORTHEAST1"
 bucket_name_daily   = "your-daily-bucket"
 bucket_name_weekly  = "your-weekly-bucket"
 bucket_name_monthly = "your-monthly-bucket"
+
+allowed_upload_ips = [
+  "127.0.0.1/32"
+]
