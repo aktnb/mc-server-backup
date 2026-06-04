@@ -7,14 +7,6 @@ resource "google_storage_bucket" "daily" {
   public_access_prevention    = "enforced"
   force_destroy               = false
 
-  ip_filter {
-    mode = "Enabled"
-
-    public_network_source {
-      allowed_ip_cidr_ranges = var.allowed_upload_ips
-    }
-  }
-
   lifecycle_rule {
     condition {
       age = 7

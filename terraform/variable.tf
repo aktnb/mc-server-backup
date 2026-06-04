@@ -19,7 +19,3 @@ variable "bucket_name_weekly" {
 variable "bucket_name_monthly" {
   type = string
 }
-
-variable "allowed_upload_ips" {
-  type = list(string)
-}
