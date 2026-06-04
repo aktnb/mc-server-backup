@@ -9,3 +9,7 @@ output "weekly_bucket_url" {
 output "monthly_bucket_url" {
   value = "gs://${google_storage_bucket.monthly.name}"
 }
+
+output "backup_service_account_email" {
+  value = google_service_account.backup_uploader.email
+}
