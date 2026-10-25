@@ -9,7 +9,7 @@ resource "google_storage_bucket" "daily" {
 
   lifecycle_rule {
     condition {
-      age = 7
+      age = 2
     }
     action {
       type = "Delete"
